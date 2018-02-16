@@ -12,7 +12,7 @@ const Card = ({ title, image, description }) => {
 
     // ejecución de función. 
     const imageSource = {
-        uri: 'https://www.revistawelldone.cl/wp-content/uploads/2017/12/avengersinfinitywar-1494357736132_1280w.jpg'
+        uri: image
     };
     const onPressButton = () => {
         console.log("Se presionó el botón");
@@ -22,13 +22,12 @@ const Card = ({ title, image, description }) => {
         <View style={styles.container}>
 
             <Text style={styles.title} >
-                CARD (EJEMPLO)!
+                {title}
             </Text>
             <Image style={styles.mainImage} 
                 source={imageSource} />
             <Text style={styles.description} >
-                Descripción de ejemplo de video
-                largo
+                {description}
             </Text> 
             <TouchableHighlight
                 style={styles.button}
