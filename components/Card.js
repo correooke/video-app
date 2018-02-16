@@ -5,13 +5,17 @@ import { View,
         TouchableHighlight,
         StyleSheet } from 'react-native';
 
-const Card = () => {
+        // Titulo, 
+        // urlImagen,
+        // descripcion
+const Card = ({ title, image, description }) => {
+
     // ejecución de función. 
     const imageSource = {
         uri: 'https://www.revistawelldone.cl/wp-content/uploads/2017/12/avengersinfinitywar-1494357736132_1280w.jpg'
     };
     const onPressButton = () => {
-
+        console.log("Se presionó el botón");
     };
 
     return (
@@ -52,6 +56,7 @@ const styles = StyleSheet.create({
         height: 150,
         width: 280,
         marginLeft: 10, 
+        noexiste: true,
     },
     button: {
         height: 30,
