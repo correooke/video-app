@@ -44,7 +44,7 @@ const Card = ({ title, image, description }) => {
 
 const styles = StyleSheet.create({
     container: {
-        height: 300,
+        height: 500, 
         width: 300,
         backgroundColor: '#0F0',
     },
@@ -55,7 +55,6 @@ const styles = StyleSheet.create({
         height: 150,
         width: 280,
         marginLeft: 10, 
-        noexiste: true,
     },
     button: {
         height: 30,
