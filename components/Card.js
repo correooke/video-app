@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { View, 
         Text, 
         Image, 
@@ -72,5 +73,13 @@ const styles = StyleSheet.create({
         fontSize: 13,
         color: "#EEE",
     }
-})
+});
+
+Card.propTypes = {
+    title: PropTypes.string.isRequired,
+    image: PropTypes.string.isRequired,
+    description: PropTypes.string,
+};
+
+
 export default Card;
