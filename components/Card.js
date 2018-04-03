@@ -45,22 +45,18 @@ const Card = ({ title, image, description }) => {
 
 const styles = StyleSheet.create({
     container: {
-        height: 500, 
-        width: 300,
+        flex: 0,
         backgroundColor: '#0F0',
+        padding: 10,
     },
     title: {
         fontSize: 30
     },
     mainImage: {
-        height: 150,
-        width: 280,
-        marginLeft: 10, 
+        height: 190,
     },
     button: {
         height: 30,
-        width: 280,
-        marginLeft: 10,
         marginTop: 10,
         backgroundColor: "#999",
     }, 
@@ -79,7 +75,7 @@ Card.propTypes = {
     title: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
     description: PropTypes.string,
-};
+}
 
 
 export default Card;
