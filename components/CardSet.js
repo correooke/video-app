@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { ScrollView, Text } from 'react-native';
 import PropTypes from 'prop-types';
 import Card from './Card';
 
 const CardSet = ({ items }) => (
-    <View>
+    <ScrollView>
         {
             items.map((item, i) => <Card 
                                         key={i} 
@@ -12,7 +12,7 @@ const CardSet = ({ items }) => (
                                         image={item.image}
                                         description={item.description}></Card>)
         }
-    </View>
+    </ScrollView>
 );
 
 CardSet.propTypes = {
