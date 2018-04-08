@@ -6,11 +6,10 @@ import Card from './Card';
 const CardSet = ({ items }) => (
     <ScrollView>
         {
-            items.map((item, i) => <Card 
-                                        key={i} 
-                                        title={item.title}
-                                        image={item.image}
-                                        description={item.description}></Card>)
+            items.map(item => <Card 
+                                    key={item.title} 
+                                    {...item} >
+                            </Card>)
         }
     </ScrollView>
 );
