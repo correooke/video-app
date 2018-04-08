@@ -1,14 +1,29 @@
 import React from 'react';
 import { View, Text } from 'react-native';
+import PropTypes from 'prop-types';
+import Card from './Card';
 
-const Items = ['Item 2', 'Item 1', 'Item 3'];
-
-const CardSet = () => (
+const CardSet = ({ items }) => (
     <View>
         {
-            Items.map((item, i) => <Text key={i}>{item}</Text>)
+            items.map((item, i) => <Card 
+                                        key={i} 
+                                        title={item.title}
+                                        image={item.image}
+                                        description={item.description}></Card>)
         }
     </View>
 );
+
+CardSet.propTypes = {
+    items: PropTypes.arrayOf(
+        PropTypes.shape(
+            { 
+                title: PropTypes.string.isRequired,
+                image: PropTypes.string.isRequired,
+                description: PropTypes.string,
+            })).isRequired,               
+
+};
 
 export default CardSet;

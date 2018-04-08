@@ -9,12 +9,14 @@ const cardData =   {
   url: 'https://www.youtube.com/watch?v=PhUMUr1q22c',
 };
 
+const Items = [cardData, cardData, cardData];
+
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
          <Text>BIENVENIDOS AL CURSO DE REACT NATIVE</Text>
-        <CardSet></CardSet>
+        <CardSet items={Items}></CardSet>
       </View>
     );
   }
