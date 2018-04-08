@@ -1,6 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import CardSet from './components/CardSet';
+import cards from './data';
 
 const cardData =   {
   title: 'AVENGERS INFINITY WAR',
@@ -9,14 +10,14 @@ const cardData =   {
   url: 'https://www.youtube.com/watch?v=PhUMUr1q22c',
 };
 
-const Items = [cardData, cardData, cardData];
+//const Items = [cardData, cardData, cardData];
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
          <Text>BIENVENIDOS AL CURSO DE REACT NATIVE</Text>
-        <CardSet items={Items}></CardSet>
+        <CardSet items={cards}></CardSet>
       </View>
     );
   }
