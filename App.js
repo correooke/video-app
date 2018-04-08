@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import Card from './components/Card';
+import CardSet from './components/CardSet';
 
 const cardData =   {
   title: 'AVENGERS INFINITY WAR',
@@ -14,11 +14,7 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
          <Text>BIENVENIDOS AL CURSO DE REACT NATIVE</Text>
-         <Card
-          title={cardData.title}
-          description={cardData.description}
-          image={cardData.image}>
-          </Card>
+        <CardSet></CardSet>
       </View>
     );
   }
