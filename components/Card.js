@@ -4,12 +4,13 @@ import { View,
         Text, 
         Image, 
         TouchableHighlight,
-        StyleSheet } from 'react-native';
+        StyleSheet, 
+        Linking } from 'react-native';
 
         // Titulo, 
         // urlImagen,
         // descripcion
-const Card = ({ title, image, description }) => {
+const Card = ({ title, image, description, url }) => {
 
     // ejecución de función. 
     const imageSource = {
@@ -17,6 +18,7 @@ const Card = ({ title, image, description }) => {
     };
     const onPressButton = () => {
         console.log("Se presionó el botón");
+        Linking.openURL(url);
     };
 
     return (
